@@ -9,9 +9,9 @@
 <body>
 {% include header.html %}
 <div class="container">
-{% for post in paginator.posts %}
+{% for post in site.posts %}
 <div class="post-item">
-  <a href=" ">
+  <a href="{{ post.url }} ">
     <h2>{{ post.title }}</h2>
   </a >
   <p class="post-date">{{ post.date }}</p >
