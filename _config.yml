@@ -1,0 +1,20 @@
+title: Adelinecui Blog
+subtitle: "好好享受世界"
+description: 个人技术博客
+author: Adelinecui
+url: "https://adelinecui.github.io"
+baseurl: ""
+
+# 文章url格式
+permalink: /:year/:month/:day/:title.html
+
+# 首页文章分页，一页显示5篇文章
+paginate: 5
+paginate_path: "/page:num"
+
+# Markdown渲染设置
+markdown: kramdown
+highlighter: rouge
+
+# 首页横幅图片地址
+header-img: "img/banner.jpg"
