@@ -9,7 +9,7 @@ baseurl: ""
 permalink: /:year/:month/:day/:title.html
 
 # 首页文章分页，一页显示5篇文章
-paginate: 5
+paginate: 20
 paginate_path: "/page:num"
 
 # Markdown渲染设置
