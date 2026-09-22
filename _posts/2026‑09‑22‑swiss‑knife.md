@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Bugku PWN — 瑞士军刀 WriteUp"
-date: 2026‑09‑15
+date: 2026‑09‑22
 categories: CTF PWN
 ---
 # Bugku PWN 瑞士军刀
