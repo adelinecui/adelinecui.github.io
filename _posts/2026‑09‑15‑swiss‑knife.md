@@ -30,4 +30,4 @@ categories: CTF PWN
 ## 知识点总结
 1. nc（netcat）网络瑞士军刀，用于TCP/UDP连接，PWN题目用来对接远程shell；
 2. cat命令：Linux读取打印文件内容；
-3. PWN题型特点：大多是连接远程端口交互，执行系统命令获取flag。
+3. PWN题型特点：大多是连接远程端口交互，执行系统命令获取flag。 
