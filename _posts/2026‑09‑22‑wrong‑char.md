@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Bugku Crypto — 抄错的字符 WriteUp"
-date: 2026-09-16
+date: 2026-09-22
 categories: CTF Crypto
 ---
 # Bugku Crypto 抄错的字符
