@@ -2,7 +2,7 @@
 layout: post
 title: "Bugku WEB — 矛盾 WriteUp"
 date: 2026-09-22
-categories: CTF WEB
+categories: bugku
 tags: Bugku,CTF,WEB,php弱类型
 ---
 
