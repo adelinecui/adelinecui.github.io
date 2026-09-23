@@ -26,7 +26,7 @@ title: 首页
     <!-- 其他 分类卡片 -->
     <div style="border:1px solid #6699ff;border-radius:12px;padding:25px;text-align:center;">
       <h2>其他</h2>
-      <p>帖子数量：{% assign count = site.posts | where_exp:"item","item.categories.size == 0 or item.categories contains 'other'" %}{{ count.size }}</p >
+      <p>帖子数量：{% assign count = site.posts | where_exp: 'item', 'item.categories contains "other"' %}{{ count.size }}</p >
       <a href="/categories/other" style="display:inline-block;padding:8px 16px;background:#6699ff;color:white;border-radius:8px;text-decoration:none;">进入文章</a >
     </div>
 
