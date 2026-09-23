@@ -2,7 +2,7 @@
 layout: post
 title: "Bugku MISC — linux WriteUp"
 date: 2026-09-22
-categories: CTF MISC
+categories: bugku
 tags: Bugku,CTF,MISC,linux,文件分析
 ---
 
