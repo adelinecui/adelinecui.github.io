@@ -1,0 +1,13 @@
+---
+layout: default
+title: Bugku WriteUp合集
+---
+<h1>Bugku 全部文章</h1>
+<ul>
+{% for post in site.categories.bugku %}
+<li>
+    <a href=" ">{{ post.title }}</a >
+    <span style="color:#777; margin-left:15px;">{{ post.date | date:"%Y-%m-%d" }}</span>
+</li>
+{% endfor %}
+</ul>
