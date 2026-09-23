@@ -2,7 +2,7 @@
 layout: post
 title: "Bugku WEB — 备份是个好习惯 WriteUp"
 date: 2026-09-22
-categories: CTF WEB
+categories: bugku
 tags: Bugku,CTF,WEB,备份文件泄露
 ---
 
