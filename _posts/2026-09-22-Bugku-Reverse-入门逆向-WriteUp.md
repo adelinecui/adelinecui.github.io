@@ -2,7 +2,7 @@
 layout: post
 title: "Bugku Reverse — 入门逆向 WriteUp"
 date: 2026-09-22
-categories: CTF Reverse
+categories: bugku
 tags: Bugku,CTF,Reverse,静态逆向
 ---
 
