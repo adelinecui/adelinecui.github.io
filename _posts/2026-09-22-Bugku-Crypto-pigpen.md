@@ -2,7 +2,7 @@
 layout: post
 title: "Bugku Crypto — 把猪困在猪圈里 WriteUp"
 date: 2026-09-22
-categories: CTF Crypto
+categories: bugku
 tags: Bugku,CTF,Crypto,猪圈密码
 ---
 
