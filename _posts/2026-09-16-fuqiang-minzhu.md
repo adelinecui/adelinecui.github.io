@@ -2,7 +2,7 @@
 layout: post
 title: "Bugku MISC — 富强民主 WriteUp"
 date: 2026-09-16
-categories: CTF MISC
+categories: bugku
 ---
 # Bugku MISC 富强民主
 ## 题目信息
