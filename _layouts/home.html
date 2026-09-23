@@ -12,18 +12,7 @@
 </div>
 
 <div class="container">
-<h2>分类</h2>
-<p>CTF</p >
-
-<h2>帖子列表</h2>
-{% for post in site.posts %}
-<div class="post-item">
-  <a href=" ">
-    <h2>{{ post.title }}</h2>
-  </a >
-  <p class="post-date">{{ post.date }}</p >
-</div>
-{% endfor %}
+{{ content }}
 </div>
 </body>
 </html>
