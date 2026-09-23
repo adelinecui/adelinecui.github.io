@@ -5,11 +5,13 @@ title: Bugku Writeup合集
 <div class="container">
 <h1>Bugku 全部文章</h1>
 <ul>
-{% for post in site.categories.bugku %}
+{% for post in site.posts %}
+{% if post.categories contains "bugku" %}
 <li>
   <a href=" ">{{ post.title }}</a >
   <span style="color:#777; margin-left:15px;">{{ post.date | date:"%Y-%m-%d" }}</span>
 </li>
+{% endif %}
 {% endfor %}
 </ul>
 </div>
