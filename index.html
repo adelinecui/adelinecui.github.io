@@ -2,6 +2,10 @@
 layout: default
 title: 首页
 ---
+<!-- 顶部横幅图片，图片在根目录 -->
+<div style="width:100%;height:300px;margin:0;padding:0;">
+< img src="/banner.jpg" style="width:100%;height:100%;object-fit:cover;margin:0;padding:0;" alt="banner">
+</div>
 
 <div style="max-width:900px;margin:30px auto;padding:0 20px;">
   <h1 style="text-align:center;">Adeline 的 CTF 博客</h1>
@@ -9,24 +13,21 @@ title: 首页
 
   <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:40px;">
 
-    <!-- Bugku 分类卡片 -->
     <div style="border:1px solid #6699ff;border-radius:12px;padding:25px;text-align:center;">
       <h2>Bugku</h2>
       <p>帖子数量：{% assign count = site.posts | where:"categories","bugku" %}{{ count.size }}</p >
       <a href=" " style="display:inline-block;padding:8px 16px;background:#6699ff;color:white;border-radius:8px;text-decoration:none;">进入文章</a >
     </div>
 
-    <!-- CTFHub 分类卡片 -->
     <div style="border:1px solid #6699ff;border-radius:12px;padding:25px;text-align:center;">
       <h2>CTFHub</h2>
       <p>帖子数量：{% assign count = site.posts | where:"categories","ctfhub" %}{{ count.size }}</p >
       <a href="/categories/ctfhub" style="display:inline-block;padding:8px 16px;background:#6699ff;color:white;border-radius:8px;text-decoration:none;">进入文章</a >
     </div>
 
-    <!-- 其他 分类卡片 -->
     <div style="border:1px solid #6699ff;border-radius:12px;padding:25px;text-align:center;">
       <h2>其他</h2>
-      <p>帖子数量：{% assign count = site.posts | where_exp: 'item', 'item.categories contains "other"' %}{{ count.size }}</p >
+      <p>帖子数量：{% assign count = site.posts | where_exp:'item','item.categories contains "other"' %}{{ count.size }}</p >
       <a href="/categories/other" style="display:inline-block;padding:8px 16px;background:#6699ff;color:white;border-radius:8px;text-decoration:none;">进入文章</a >
     </div>
 
