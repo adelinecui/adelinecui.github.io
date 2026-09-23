@@ -2,7 +2,7 @@
 layout: post
 title: "Bugku Crypto — 散乱的密文 WriteUp"
 date: 2026-09-16
-categories: CTF Crypto
+categories: bugku
 ---
 # Bugku Crypto 散乱的密文
 ## 题目信息
