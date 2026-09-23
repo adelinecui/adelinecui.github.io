@@ -2,7 +2,7 @@
 layout: post
 title: "Bugku PWN - 瑞士军刀 WriteUp"
 date: 2026-09-22
-categories: CTF PWN
+categories: bugku
 ---
 # Bugku PWN 瑞士军刀
 ## 题目信息
