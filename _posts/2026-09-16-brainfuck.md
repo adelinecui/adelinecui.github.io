@@ -2,7 +2,7 @@
 layout: post
 title: "Bugku Crypto — [+-<>] WriteUp"
 date: 2026-09-16
-categories: CTF Crypto
+categories: bugku
 ---
 # Bugku Crypto [+-<>]
 ## 题目信息
