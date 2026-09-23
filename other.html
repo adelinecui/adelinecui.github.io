@@ -1,13 +1,13 @@
 ---
 layout: default
-title: 其他随笔
+title: 其他 Writeup合集
 ---
-<h1>其他随笔</h1>
+<h1>其他 全部文章</h1>
 <ul>
 {% for post in site.categories.other %}
 <li>
-    <a href=" ">{{ post.title }}</a >
-    <span style="color:#777; margin-left:15px;">{{ post.date | date:"%Y-%m-%d" }}</span>
+  <a href=" ">{{ post.title }}</a >
+  <span style="color:#777; margin-left:15px;">{{ post.date | date:"%Y-%m-%d" }}</span>
 </li>
 {% endfor %}
 </ul>
