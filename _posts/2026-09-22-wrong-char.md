@@ -2,7 +2,7 @@
 layout: post
 title: "Bugku Web - wrong-char WriteUp"
 date: 2026-09-22
-categories: CTF Web
+categories: bugku
 ---
 # Bugku Crypto 抄错的字符
 ## 题目信息
