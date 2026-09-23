@@ -2,7 +2,7 @@
 layout: post
 title: "Bugku Web——头等舱 WriteUp"
 date: 2026-09-22
-categories: CTF
+categories: bugku
 ---
 # Bugku Web——头等舱 解题WriteUp
 ## 一、题目信息
