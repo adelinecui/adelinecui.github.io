@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bugku Crypto: easy_hash
+title:" Bugku Crypto: easy_hash"
 categories: bugku
 tags: [Crypto, MD5, Python]
 ---
