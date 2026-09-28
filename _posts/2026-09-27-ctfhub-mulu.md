@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "CTFHub | 目录遍历"
-categories: CTF
+categories: ctfhub
 tags: CTFHub 信息泄露 Apache目录遍历
 ---
 
