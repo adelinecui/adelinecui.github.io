@@ -1,9 +1,10 @@
 ---
 layout: post
-title: "CTFHub 信息泄露：目录遍历 "
+title: "CTFHub 信息泄露- 目录遍历 "
 date: 2026-09-27
-categories: ctf
+categories: ctfhub
 tags: CTFHub 信息泄露 Apache目录遍历
+permalink: /ctfhub/mulu-bianli.html
 ---
 
 ## 题目信息
