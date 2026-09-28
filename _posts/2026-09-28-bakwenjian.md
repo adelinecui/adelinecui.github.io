@@ -4,7 +4,7 @@ title: "CTFHub 信息泄露 - 备份文件下载-bak文件下载"
 date: 2026-09-28
 categories: ctfhub
 tags: CTFHub 信息泄露 备份文件 源码泄露
-permalink: /ctfhub/beifen-wenjian.html
+permalink: /ctfhub/beifen-bak.html
 ---
 
 ## 题目信息
