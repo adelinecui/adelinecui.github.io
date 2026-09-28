@@ -2,7 +2,7 @@
 layout: post
 title: "CTFHub 信息泄露：目录遍历 "
 date: 2026-09-27
-categories: ctfhub
+categories: ctf
 tags: CTFHub 信息泄露 Apache目录遍历
 ---
 
