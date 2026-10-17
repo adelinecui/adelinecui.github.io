@@ -19,6 +19,12 @@
 <h1 style="margin-top:0;padding-top:8px;">{{ page.title }}</h1>
 <p>{{ page.date }}</p >
 {{ content }}
+{% if page.categories contains "ctfhub" %}
+<div style="text-align:center;margin:40px 0;">
+    <a href="{{ site.baseurl }}/ctfhub.html" style="display:inline-block;background-color:#7998f5;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-size:18px;">返回CTFHub总库</a>
+</div>
+{% endif %}
+
 </div>
 
 </body>
