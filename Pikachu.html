@@ -1,0 +1,24 @@
+---
+layout: home
+title: Pikachu Writeup合集
+permalink: /categories/pikachu/
+---
+
+<div class="container">
+    <h1>Pikachu 全部文章</h1>
+    <ul>
+        {% for post in site.posts %}
+            {% if post.categories contains "pikachu" %}
+            <li>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+                <span style="color:#777; margin-left:15px;">{{ post.date | date:"%Y-%m-%d" }}</span>
+            </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+    <!-- 底部返回主页按钮 -->
+    <div style="text-align:center;margin:40px 0;">
+        <a href="{{ site.baseurl }}/" style="display:inline-block;background-color:#7989f5;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;">返回主页</a>
+    </div>
+</div>
