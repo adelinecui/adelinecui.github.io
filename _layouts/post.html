@@ -1,34 +1,36 @@
 ---
+layout: null
 ---
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ page.title }}</title>
-<link rel="stylesheet" href="/css/main.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-<!-- 只有这一处顶部横幅，下面不再放图片 -->
-<div style="width:100%;height:300px;margin:0;padding:0;">
-<img src="/banner.jpg" style="width:100%;height:100%;object-fit:cover;margin:0;padding:0;display:block;" alt="banner">
-</div>
+    <!-- 顶部横幅 -->
+    <div style="width:100%;height:300px;margin:0;padding:0;">
+        <img src="/banner.jpg" style="width:100%;height:100%;object-fit:cover;margin:0;padding:0;display:block;" alt="banner">
+    </div>
 
-<!-- 取消上边距，文字紧贴上面的banner -->
-<div class="container" style="margin-top:0 !important;padding-top:0 !important;">
-<h1 style="margin-top:0;padding-top:8px;">{{ page.title }}</h1>
-<p>{{ page.date }}</p >
-{{ content }}
+    <div class="container" style="margin-top:0 !important;padding-top:0 !important;">
+        <h1 style="margin-top:0;padding-top:8px;">{{ page.title }}</h1>
+        <p>{{ page.date }}</p>
+        
+        <!-- 文章正文内容 -->
+        {{ content }}
+
+        <!-- 自动返回对应分类总库的按钮 -->
         {% if page.categories.size > 0 %}
-        <div style="text-align:center; margin:40px 0;">
-            <!-- 自动获取文章的第一个分类名，并拼接正确的路径 -->
-            <a href="{{ site.baseurl }}/categories/{{ page.categories.first }}/" style="display:inline-block; background-color:#7989f5; color:white; padding:12px 24px; border-radius:8px; text-decoration:none;">
+        <div style="text-align:center; margin: 50px 0;">
+            <!-- 这里去掉了 site.baseurl，直接使用绝对路径，避免双斜杠导致404 -->
+            <a href="/categories/{{ page.categories.first }}/" style="display:inline-block; background-color:#7989f5; color:white; padding:12px 24px; border-radius:8px; text-decoration:none;">
                 返回 {{ page.categories.first | capitalize }} 总库
             </a>
         </div>
         {% endif %}
-
-</div>
-
+    </div>
 </body>
 </html>
