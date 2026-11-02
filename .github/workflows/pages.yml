@@ -1,39 +1,60 @@
-name: Build and Deploy
+name: Deploy Jekyll site to Pages
+
 on:
   push:
-    branches: [ main ]
+    branches: ["main"] # 如果你的主分支叫 master，请改成 master
   workflow_dispatch:
+
+# 1. 全局权限配置：给足需要的权限
 permissions:
   contents: read
   pages: write
-  id-token: write
+  id-token: write 
+
 concurrency:
   group: "pages"
   cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.2'
+          ruby-version: '3.1' # 如果你本地是 3.2 或 3.0，请修改
           bundler-cache: true
-      - name: Build site with Jekyll
-        run: bundle install && bundle exec jekyll build
+          
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v4
+        
+      - name: Build with Jekyll
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: production
+          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-        with:
-          path: _site
+
   deploy:
     needs: build
-    runs-on: ubuntu-latest
+    
+    # 2. 局部权限配置：双重保险
+    permissions:
+      pages: write
+      id-token: write
+      
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+      
+    runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        # 3. 核心操作：把原来的 @v5 改成了 @v4，避开新版本的强制 OIDC 验证
+        uses: actions/deploy-pages@v4 
