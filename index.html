@@ -7,35 +7,39 @@ title: Adeline 的 CTF 博客
     <!-- 顶部横幅大图（保留你原来的） -->
     
     <!-- 卡片容器：一行四个，间距 20px，自适应居中 -->
+       <!-- 卡片容器：一行四个，间距 20px，自适应居中 -->
     <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 40px;">
         
         <!-- 卡片 1：Bugku -->
         <div style="width: 23%; min-width: 220px; border: 1px solid #7989f5; border-radius: 8px; padding: 20px; box-sizing: border-box; text-align: center; transition: box-shadow 0.3s;" onmouseover="this.style.boxShadow='0 4px 12px rgba(121,137,245,0.3)'" onmouseout="this.style.boxShadow='none'">
             <h2 style="margin-top: 0; font-size: 24px;">Bugku</h2>
-            <p style="color: #666; margin-bottom: 20px;">帖子数量：33</p>
-            <a href="/categories/bugku" style="display: inline-block; background-color: #7989f5; color: white; padding: 10px 24px; border-radius: 5px; text-decoration: none; font-size: 15px;">进入文章</a>
+            <p style="color: #666; margin-bottom: 20px;">帖子数量：{{ site.categories.bugku | size }}</p>
+            <a href="/categories/bugku/" style="display: inline-block; background-color: #7989f5; color: white; padding: 10px 24px; border-radius: 5px; text-decoration: none; font-size: 15px;">进入文章</a>
         </div>
 
         <!-- 卡片 2：CTFHub -->
         <div style="width: 23%; min-width: 220px; border: 1px solid #7989f5; border-radius: 8px; padding: 20px; box-sizing: border-box; text-align: center; transition: box-shadow 0.3s;" onmouseover="this.style.boxShadow='0 4px 12px rgba(121,137,245,0.3)'" onmouseout="this.style.boxShadow='none'">
             <h2 style="margin-top: 0; font-size: 24px;">CTFHub</h2>
-            <p style="color: #666; margin-bottom: 20px;">帖子数量：50</p>
-            <a href="/categories/ctfhub" style="display: inline-block; background-color: #7989f5; color: white; padding: 10px 24px; border-radius: 5px; text-decoration: none; font-size: 15px;">进入文章</a>
+            <p style="color: #666; margin-bottom: 20px;">帖子数量：{{ site.categories.ctfhub | size }}</p>
+            <a href="/categories/ctfhub/" style="display: inline-block; background-color: #7989f5; color: white; padding: 10px 24px; border-radius: 5px; text-decoration: none; font-size: 15px;">进入文章</a>
         </div>
 
-        <!-- 卡片 3：Pikachu (已调整到第三个位置) -->
+        <!-- 卡片 3：Pikachu -->
         <div style="width: 23%; min-width: 220px; border: 1px solid #7989f5; border-radius: 8px; padding: 20px; box-sizing: border-box; text-align: center; transition: box-shadow 0.3s;" onmouseover="this.style.boxShadow='0 4px 12px rgba(121,137,245,0.3)'" onmouseout="this.style.boxShadow='none'">
             <h2 style="margin-top: 0; font-size: 24px;">Pikachu</h2>
             <p style="color: #666; margin-bottom: 20px;">帖子数量：{{ site.categories.pikachu | size }}</p>
-            <a href="/categories/pikachu" style="display: inline-block; background-color: #7989f5; color: white; padding: 10px 24px; border-radius: 5px; text-decoration: none; font-size: 15px;">进入文章</a>
+            <a href="/categories/pikachu/" style="display: inline-block; background-color: #7989f5; color: white; padding: 10px 24px; border-radius: 5px; text-decoration: none; font-size: 15px;">进入文章</a>
         </div>
 
-        <!-- 卡片 4：其他 (已调整到第四个位置) -->
+        <!-- 卡片 4：其他 -->
         <div style="width: 23%; min-width: 220px; border: 1px solid #7989f5; border-radius: 8px; padding: 20px; box-sizing: border-box; text-align: center; transition: box-shadow 0.3s;" onmouseover="this.style.boxShadow='0 4px 12px rgba(121,137,245,0.3)'" onmouseout="this.style.boxShadow='none'">
             <h2 style="margin-top: 0; font-size: 24px;">其他</h2>
-            <p style="color: #666; margin-bottom: 20px;">帖子数量：1</p>
-            <a href="/categories/others" style="display: inline-block; background-color: #7989f5; color: white; padding: 10px 24px; border-radius: 5px; text-decoration: none; font-size: 15px;">进入文章</a>
+            <p style="color: #666; margin-bottom: 20px;">帖子数量：{{ site.categories.other | size }}</p>
+            <a href="/categories/other/" style="display: inline-block; background-color: #7989f5; color: white; padding: 10px 24px; border-radius: 5px; text-decoration: none; font-size: 15px;">进入文章</a>
         </div>
+
+    </div> <!-- 这里闭合 flex 容器 -->
+</div> <!-- 这里闭合最外层的 class="container" -->
 
     </div>
 </div>
