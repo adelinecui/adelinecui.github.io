@@ -31,15 +31,16 @@ title: Adeline 的 CTF 博客
             <a href="/categories/pikachu/" style="display: inline-block; background-color: #7989f5; color: white; padding: 10px 24px; border-radius: 5px; text-decoration: none; font-size: 15px;">进入文章</a>
         </div>
 
-        <!-- 卡片 4：其他 -->
+        <!-- 卡片 4：SQLi-Labs -->
+        <div style="width: 23%; min-width: 220px; border: 1px solid #7989f5; border-radius: 8px; padding: 20px; box-sizing: border-box; text-align: center; transition: box-shadow 0.3s;" onmouseover="this.style.boxShadow='0 4px 12px rgba(121,137,245,0.3)'" onmouseout="this.style.boxShadow='none'">
+            <h2 style="margin-top: 0; font-size: 24px;">SQLi-Labs</h2>
+            <p style="color: #666; margin-bottom: 20px;">帖子数量：{{ site.categories.sqli-labs | size }}</p>
+            <a href="/categories/sqli-labs/" style="display: inline-block; background-color: #7989f5; color: white; padding: 10px 24px; border-radius: 5px; text-decoration: none; font-size: 15px;">进入文章</a>
+        </div>
+
+        <!-- 卡片 5：其他 -->
         <div style="width: 23%; min-width: 220px; border: 1px solid #7989f5; border-radius: 8px; padding: 20px; box-sizing: border-box; text-align: center; transition: box-shadow 0.3s;" onmouseover="this.style.boxShadow='0 4px 12px rgba(121,137,245,0.3)'" onmouseout="this.style.boxShadow='none'">
             <h2 style="margin-top: 0; font-size: 24px;">其他</h2>
             <p style="color: #666; margin-bottom: 20px;">帖子数量：{{ site.categories.other | size }}</p>
             <a href="/categories/other/" style="display: inline-block; background-color: #7989f5; color: white; padding: 10px 24px; border-radius: 5px; text-decoration: none; font-size: 15px;">进入文章</a>
         </div>
-
-    </div> <!-- 这里闭合 flex 容器 -->
-</div> <!-- 这里闭合最外层的 class="container" -->
-
-    </div>
-</div>
